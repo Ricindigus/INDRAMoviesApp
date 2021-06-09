@@ -1,11 +1,11 @@
 package pe.com.dmorales.moviesapp.splash.features.view
 
-import android.content.Intent.getIntent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import org.koin.android.ext.android.inject
 import pe.com.dmorales.moviesapp.MainActivity
 import pe.com.dmorales.moviesapp.databinding.ActivitySplashBinding
+import pe.com.dmorales.moviesapp.login.features.view.LoginActivity
 
 class SplashActivity : AppCompatActivity() {
     private lateinit var mBinding: ActivitySplashBinding
@@ -24,8 +24,16 @@ class SplashActivity : AppCompatActivity() {
     private fun subscribeObservers() {
         mViewModel.navigateToLogin.observe(this){
             it?.let {
-                startActivity(MainActivity.getIntent(this))
+                startActivity(LoginActivity.getIntent(this))
                 mViewModel.doneNavigateToLogin()
+                finish()
+            }
+        }
+
+        mViewModel.navigateToMain.observe(this){
+            it?.let {
+                startActivity(MainActivity.getIntent(this))
+                mViewModel.doneNavigateToMain()
                 finish()
             }
         }
