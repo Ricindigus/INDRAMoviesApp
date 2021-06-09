@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.MoviesApp" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/blue_900</item>
+        <item name="colorPrimaryDark">@color/blue_900_dark</item>
+        <item name="colorAccent">@color/red_800</item>
+        <item name="fontFamily">@font/museo_sans_500</item>
+    </style>
+
+    <style name="Theme.MoviesApp.NoActionBar" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/blue_900</item>
+        <item name="colorPrimaryDark">@color/blue_900_dark</item>
+        <item name="colorAccent">@color/red_800</item>
+        <item name="fontFamily">@font/museo_sans_500</item>
+    </style>
+</resources>

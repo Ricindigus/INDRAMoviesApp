@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MoviesApp</string>
+    <string name="database_name">movies_app_database</string>
+    <string name="img_app_description">icono de la app</string>
+</resources>
