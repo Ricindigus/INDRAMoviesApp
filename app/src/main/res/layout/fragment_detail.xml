@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".movies.features.view.detail.DetailFragment">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="pe.com.dmorales.moviesapp.movies.features.view.detail.DetailViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/detail_ivImagen"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/image_movie_description"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:setImageFromURL="@{viewModel.movieData.posterImage}"
+            tools:src="@drawable/preview" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/detail_ivImagen"
+            tools:context=".detail.DetailFragment">
+
+            <TextView
+                android:id="@+id/detail_tvFecha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:text="@{viewModel.movieData.releaseDate}"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@string/date_preview" />
+
+            <TextView
+                android:id="@+id/detail_tvTitulo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:text="@{viewModel.movieData.title}"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/detail_tvFecha"
+                app:layout_constraintTop_toBottomOf="@+id/detail_tvFecha"
+                tools:text="@string/title_preview" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/detail_tvDescripcion"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:voteAverage="@{viewModel.movieData.voteAverage}"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="@+id/detail_tvTitulo"
+                app:layout_constraintStart_toStartOf="@+id/detail_tvTitulo"
+                app:layout_constraintTop_toBottomOf="@+id/detail_tvTitulo"
+                tools:text="@string/vote_average_preview" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/detail_tvAutor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:voteCount="@{viewModel.movieData.voteCount}"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/detail_tvDescripcion"
+                app:layout_constraintTop_toBottomOf="@+id/detail_tvDescripcion"
+                tools:text="@string/vote_count_preview" />
+
+            <TextView
+                android:id="@+id/detail_tvCuerpo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginBottom="@dimen/margin_medium"
+                android:text="@{viewModel.movieData.overview}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/detail_tvDescripcion"
+                app:layout_constraintStart_toStartOf="@+id/detail_tvAutor"
+                app:layout_constraintTop_toBottomOf="@+id/detail_tvAutor"
+                tools:text="@string/overview_preview" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

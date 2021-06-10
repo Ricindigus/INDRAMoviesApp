@@ -6,4 +6,14 @@
     <string name="login_password_hint">Password</string>
     <string name="login_button_text">Ingresar</string>
     <string name="loading_login_text">Iniciando sesion…</string>
+    <string name="date_preview">2020–09–18</string>
+    <string name="title_preview">Violet Evergarden: The Movie</string>
+    <string name="overview_preview">After working as an Auto Memory Doll, Violet Evergarden has come to learn the meaning of the words \"I love you.\" Her soul, which has been deeply scarred by the war, has begun to heal. She continues to move forward in life, helping others in need, while keeping the words of the first person who ever said \"I love you\" to her close to her heart. When she takes on a job to write a letter for a terminally-ill boy, time starts to move forward.</string>
+    <string name="vote_average_preview">7.5</string>
+    <string name="vote_count_preview">12</string>
+    <string name="main_appbar_menu_logout">Cerrar sesión</string>
+    <string name="image_movie_description">Imagen de la pelicula</string>
+    <string name="popularity">Popularity: %1$s</string>
+    <string name="vote_average">Vote average: %1$s</string>
+    <string name="vote_count">Vote count: %1$s</string>
 </resources>

@@ -5,9 +5,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import org.koin.android.ext.android.inject
-import pe.com.dmorales.moviesapp.MainActivity
 import pe.com.dmorales.moviesapp.core.utils.toast
 import pe.com.dmorales.moviesapp.databinding.ActivityLoginBinding
+import pe.com.dmorales.moviesapp.movies.features.view.main.MainActivity
 
 
 class LoginActivity : AppCompatActivity() {

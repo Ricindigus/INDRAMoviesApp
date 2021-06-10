@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/moviesFragment">
+
+    <fragment
+        android:id="@+id/moviesFragment"
+        android:name="pe.com.dmorales.moviesapp.movies.features.view.movies.MoviesFragment"
+        android:label="Movies Upcoming"
+        tools:layout="@layout/fragment_movies">
+        <action
+            android:id="@+id/action_moviesFragment_to_detailFragment"
+            app:destination="@id/detailFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"/>
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="pe.com.dmorales.moviesapp.movies.features.view.detail.DetailFragment"
+        android:label="Movie Detail"
+        tools:layout="@layout/fragment_detail">
+        <argument
+            android:name="movieData"
+            app:argType="pe.com.dmorales.moviesapp.movies.domain.entities.MovieSummary" />
+    </fragment>
+</navigation>

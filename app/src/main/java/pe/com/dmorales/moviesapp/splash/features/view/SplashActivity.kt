@@ -3,9 +3,9 @@ package pe.com.dmorales.moviesapp.splash.features.view
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import org.koin.android.ext.android.inject
-import pe.com.dmorales.moviesapp.MainActivity
 import pe.com.dmorales.moviesapp.databinding.ActivitySplashBinding
 import pe.com.dmorales.moviesapp.login.features.view.LoginActivity
+import pe.com.dmorales.moviesapp.movies.features.view.main.MainActivity
 
 class SplashActivity : AppCompatActivity() {
     private lateinit var mBinding: ActivitySplashBinding

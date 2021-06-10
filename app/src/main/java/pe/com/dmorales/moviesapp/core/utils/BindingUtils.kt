@@ -6,6 +6,7 @@ import androidx.databinding.BindingAdapter
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.google.android.material.button.MaterialButton
+import com.google.android.material.textview.MaterialTextView
 import pe.com.dmorales.moviesapp.R
 
 @BindingAdapter("setImageFromURL")
@@ -30,6 +31,27 @@ fun MaterialButton.setButtonEnabled(value: Boolean?){
             isEnabled = false
             alpha = 0.5F
         }
+    }
+}
+
+@BindingAdapter("popularity")
+fun MaterialTextView.setPopularity(popularity: String?){
+    popularity?.also {
+        text = resources.getString(R.string.popularity, popularity)
+    }
+}
+
+@BindingAdapter("voteAverage")
+fun MaterialTextView.setVoteAverage(voteAverage: String?){
+    voteAverage?.also {
+        text = resources.getString(R.string.vote_average, voteAverage)
+    }
+}
+
+@BindingAdapter("voteCount")
+fun MaterialTextView.setVoteCount(voteCount: String?){
+    voteCount?.also {
+        text = resources.getString(R.string.vote_count, voteCount)
     }
 }
 
